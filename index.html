@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#071b3b">
-<meta name="description" content="The King's Chess Club at 3 Cord Ministries in Las Vegas. All ages and skill levels welcome. Beginners welcome!">
+<meta name="description" content="The King's Chess Club at 3 Cord Ministries in Las Vegas. A welcoming chess club and Christian outreach. All ages and skill levels welcome. Beginners welcome!">
 <title>The King's Chess Club | Chess • Community • Character</title>
 <style>
 :root{--navy:#071b3b;--navy2:#0d2b55;--gold:#e9aa28;--gold2:#ffd46a;--cream:#fffaf0;--ink:#14213a;--muted:#596579;--white:#fff}
@@ -19,8 +20,8 @@ header{position:sticky;top:0;z-index:20;background:rgba(7,27,59,.97);color:#fff;
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:.02em}
 .brand img{width:54px;height:54px;object-fit:contain;background:#fff;border-radius:50%}
 .brand span{line-height:1.08}.brand small{display:block;color:var(--gold2);font-size:.72rem;font-weight:650;letter-spacing:.12em;margin-top:4px}
-nav{display:flex;align-items:center;gap:24px}
-nav a{text-decoration:none;font-size:.94rem;font-weight:650;color:#fff}
+nav{display:flex;align-items:center;gap:18px}
+nav a{text-decoration:none;font-size:.91rem;font-weight:650;color:#fff}
 nav a:hover,nav a:focus{color:var(--gold2)}
 .menu-toggle{display:none;background:transparent;color:white;border:1px solid #8290a8;border-radius:8px;padding:8px 11px;font-size:1.3rem}
 .hero{position:relative;isolation:isolate;color:#fff;background:linear-gradient(90deg,rgba(5,20,46,.92),rgba(5,20,46,.68)),url('https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=2000&q=85') center 48%/cover}
@@ -67,6 +68,7 @@ h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.25rem)
 .quote-band{background:var(--navy);color:#fff;text-align:center;padding:62px 18px;border-block:5px solid var(--gold)}
 .quote-band blockquote{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.45rem,3.3vw,2.35rem);line-height:1.35;max-width:850px;margin:0 auto 14px}
 .quote-band cite{font-style:normal;font-weight:800;letter-spacing:.08em;color:var(--gold2)}
+.quote-band p{max-width:780px;margin:20px auto 0;color:#e3eaf5;line-height:1.75;font-size:1rem}
 .schedule-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:stretch}
 .schedule-panel{padding:30px;border-radius:16px;background:var(--navy);color:white}
 .schedule-panel h3{font-family:Georgia,serif;font-size:1.65rem;color:var(--gold2)}
@@ -78,7 +80,11 @@ h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.25rem)
 .detail-icon{font-size:1.35rem}
 .detail strong{display:block;color:var(--navy);margin-bottom:5px}
 .detail p{margin:0;color:var(--muted);line-height:1.6}
-.note{font-size:.9rem;color:var(--muted);margin-top:18px}
+.detail p+p{margin-top:10px}
+.detail a{color:#174d91;text-underline-offset:3px;font-weight:650}
+.note{font-size:.9rem;color:var(--muted);margin-top:18px;line-height:1.7}
+.church-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--gold2);font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.church-link:hover{color:#fff}
 .cta{background:linear-gradient(125deg,#fff8e7,#f8fbff)}
 .cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
 .cta h2{max-width:680px;margin-bottom:10px}
@@ -90,19 +96,30 @@ footer{background:#04132c;color:#dce4f1;padding:35px 0}
 .footer-brand strong{display:block;color:#fff}
 .footer-brand span,.copyright{font-size:.86rem;color:#aebbd0}
 footer a{color:var(--gold2)}
+@media(max-width:1050px){
+ .nav{gap:12px}
+ nav{gap:12px}
+ nav a{font-size:.84rem}
+ .brand{font-size:.9rem}
+ .brand small{font-size:.65rem}
+}
 @media(max-width:850px){
  .hero-inner{grid-template-columns:1fr .62fr;gap:20px;min-height:530px}
  .hero-logo{width:min(100%,260px)}
- nav{gap:14px}nav a{font-size:.86rem}
+ nav{gap:10px}nav a{font-size:.8rem}
  .facts{gap:4px}.fact{padding:7px 4px}
  .cards{grid-template-columns:repeat(2,1fr)}.card:last-child{grid-column:span 2}
+}
+@media(max-width:700px){
+ .menu-toggle{display:block}
+ nav{display:none;position:absolute;top:78px;left:0;right:0;padding:18px 22px 22px;background:var(--navy);border-bottom:2px solid var(--gold);flex-direction:column;align-items:stretch;gap:0}
+ nav.open{display:flex}nav a{padding:13px 2px;border-bottom:1px solid #ffffff20;font-size:1rem}
+ .nav{min-height:68px}
 }
 @media(max-width:650px){
  .container{width:min(100% - 28px,560px)}
  .nav{min-height:68px}.brand img{width:46px;height:46px}.brand{font-size:.92rem}.brand small{font-size:.63rem}
- .menu-toggle{display:block}
- nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:var(--navy);border-bottom:2px solid var(--gold);flex-direction:column;align-items:stretch;gap:0}
- nav.open{display:flex}nav a{padding:13px 2px;border-bottom:1px solid #ffffff20;font-size:1rem}
+ nav{top:68px}
  .hero-inner{grid-template-columns:1fr;min-height:0;padding-block:58px 46px;text-align:center}
  .hero-copy p{margin-inline:auto}.actions{justify-content:center}.hero-logo{width:190px;grid-row:1;margin-bottom:8px}
  h1{font-size:clamp(2.6rem,12vw,4rem)}
@@ -127,7 +144,11 @@ footer a{color:var(--gold2)}
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
     <nav id="main-nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#welcome">Who Can Join?</a><a href="#meetings">Meetings</a><a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#welcome">Who Can Join?</a>
+      <a href="#meetings">Meetings</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries ↗</a>
     </nav>
   </div>
 </header>
@@ -136,10 +157,14 @@ footer a{color:var(--gold2)}
 <section class="hero">
  <div class="container hero-inner">
   <div class="hero-copy">
-   <span class="eyebrow">A place at the board for everyone</span>
+   <span class="eyebrow">Chess, community & Christian hospitality</span>
    <h1>Good moves.<br><em>Great community.</em></h1>
    <p>Come enjoy chess, meet new people, and sharpen your skills in a friendly, welcoming setting. Whether you’re learning your first moves or have played for years, there’s a seat for you.</p>
-   <div class="actions"><a class="btn btn-gold" href="#meetings">Plan Your Visit</a><a class="btn btn-outline" href="#welcome">Beginners Welcome</a></div>
+   <div class="actions">
+    <a class="btn btn-gold" href="#meetings">Plan Your Visit</a>
+    <a class="btn btn-outline" href="#welcome">Beginners Welcome</a>
+   </div>
+   <a class="church-link" href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">Visit 3 Cord Ministries’ website ↗</a>
   </div>
   <div class="hero-logo"><img src="assets/kings-chess-club-logo.png" alt="The King's Chess Club emblem with Proverbs 27:17"></div>
  </div>
@@ -155,24 +180,52 @@ footer a{color:var(--gold2)}
 
 <section id="about">
  <div class="container intro-grid">
-  <div class="photo"><img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=1100&q=85" alt="Chess pieces on a chessboard" loading="lazy"></div>
+  <div class="photo"><img src="https://kingschessclub.org/assets/HandMovingPiece.pgn" alt="Chess pieces on a chessboard" loading="lazy"></div>
   <div class="copy">
    <span class="kicker">Chess • Community • Character</span>
    <h2>More than a game.</h2>
    <h3>A welcoming place to play and grow.</h3>
-   <p>The King’s Chess Club brings people together over a game that rewards patience, creativity, sportsmanship, and thoughtful decisions. Our goal is simple: enjoy chess, encourage one another, and build community one move at a time.</p>
-   <ul class="checklist"><li>Casual games in a relaxed atmosphere</li><li>Beginners can learn at their own pace</li><li>All ages and playing strengths are welcome</li><li>Come to play, learn, watch, or meet people</li></ul>
+   <p>The King’s Chess Club brings people together over a game that rewards patience, creativity, sportsmanship, and thoughtful decisions. Hosted at <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a>, our club is also a Christian outreach. We hope to share Christ’s love through kindness, hospitality, encouragement, and genuine friendship.</p>
+   <p>Everyone is welcome, whatever your faith background—or if you have no religious faith. Come enjoy chess, ask questions, or simply get to know us. There’s no pressure to participate in a faith conversation; we want every visitor to feel respected and at home.</p>
+   <ul class="checklist">
+    <li>Casual games in a relaxed atmosphere</li>
+    <li>Beginners can learn at their own pace</li>
+    <li>All ages and playing strengths are welcome</li>
+    <li>Come to play, learn, watch, or meet people</li>
+   </ul>
   </div>
  </div>
 </section>
 
 <section id="welcome" class="welcome">
  <div class="container">
-  <div class="section-head"><span class="kicker">Pull up a chair</span><h2>There’s room for you here.</h2><p>You don’t need to be a strong player—or even know all the rules—to get started. Bring your curiosity and we’ll help you find your place at the board.</p></div>
+  <div class="section-head">
+   <span class="kicker">Pull up a chair</span>
+   <h2>There’s room for you here.</h2>
+   <p>You don’t need to be a strong player—or even know all the rules—to get started. Bring your curiosity and we’ll help you find your place at the board. Our hope is to make everyone feel welcome through kindness, encouragement, and genuine friendship.</p>
+  </div>
   <div class="cards">
-   <article class="card"><img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=900&q=85" alt="Chessboard ready for a friendly game" loading="lazy"><div class="card-body"><h3>Love the game?</h3><p>Find a friendly opponent, try a new strategy, or enjoy a thoughtful game with fellow chess fans.</p></div></article>
-   <article class="card"><img src="https://images.unsplash.com/photo-1599629954294-14df9ec8d7f5?auto=format&fit=crop&w=900&q=85" alt="Hands moving chess pieces during a game" loading="lazy"><div class="card-body"><h3>Just getting started?</h3><p>Beginners are welcome. Ask questions, learn the pieces, and build confidence one move at a time.</p></div></article>
-   <article class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" alt="Children learning together in a group setting" loading="lazy"><div class="card-body"><h3>A club for all ages</h3><p>Chess can bring generations together. Young players are welcome with a parent or caregiver’s support.</p></div></article>
+   <article class="card">
+    <img src="https://kingschessclub/assets/" alt="Chess pieces set out for a game" loading="lazy">
+    <div class="card-body">
+     <h3>Love the game?</h3>
+     <p>Find a friendly opponent, try a new strategy, or enjoy a thoughtful game with fellow chess fans.</p>
+    </div>
+   </article>
+   <article class="card">
+    <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=900&q=85" alt="Chessboard and pieces ready for play" loading="lazy">
+    <div class="card-body">
+     <h3>Just getting started?</h3>
+     <p>Beginners are welcome. Ask questions, learn the pieces, and build confidence one move at a time.</p>
+    </div>
+   </article>
+   <article class="card">
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" alt="Children learning together in a group setting" loading="lazy">
+    <div class="card-body">
+     <h3>A club for all ages</h3>
+     <p>Chess can bring generations together. Young players are welcome with a parent or caregiver’s support.</p>
+    </div>
+   </article>
   </div>
   <p class="note">Photos are illustrative. Please check with a parent or guardian about arrangements for children attending.</p>
  </div>
@@ -181,18 +234,45 @@ footer a{color:var(--gold2)}
 <div class="quote-band">
  <blockquote>“As iron sharpens iron, so one person sharpens another.”</blockquote>
  <cite>PROVERBS 27: 17</cite>
+ <p>This verse captures our hope for the club: that we encourage one another, grow in character, and build genuine friendships—over the chessboard and beyond it.</p>
 </div>
 
 <section id="meetings">
  <div class="container">
-  <div class="section-head"><span class="kicker">Join us</span><h2>Make Thursday your chess day.</h2><p>Drop in for a game, meet the club, and see what you think. No tournament experience is needed.</p></div>
+  <div class="section-head">
+   <span class="kicker">Join us</span>
+   <h2>Make Thursday your chess day.</h2>
+   <p>Drop in for a game, meet the club, and see what you think. No tournament experience is needed.</p>
+  </div>
   <div class="schedule-grid">
-   <div class="schedule-panel"><h3>Everyone is welcome.</h3><p>All ages and skill levels welcome! Beginners welcome! We’re starting with casual play and a community-first atmosphere.</p><a class="btn btn-gold" href="#contact">Ask a Question</a></div>
+   <div class="schedule-panel">
+    <h3>Everyone is welcome.</h3>
+    <p>All ages and skill levels welcome! Beginners welcome! We’re starting with casual play and a community-first atmosphere. As a Christian outreach hosted by 3 Cord Ministries, we aim to offer hospitality and friendship without pressure, whether or not you share our faith.</p>
+    <a class="btn btn-gold" href="#contact">Ask a Question</a>
+    <br>
+    <a class="church-link" href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">Learn about 3 Cord Ministries ↗</a>
+   </div>
    <div class="details">
-    <div class="detail"><span class="detail-icon">📅</span><div><strong>Opening meeting</strong><p>Thursday, October 15, 2026</p></div></div>
-    <div class="detail"><span class="detail-icon">🕓</span><div><strong>Weekly schedule</strong><p>Every Thursday, 4:00–6:00 PM</p></div></div>
-    <div class="detail"><span class="detail-icon">📍</span><div><strong>Where we meet</strong><p>3 Cord Ministries<br>4955 S. Durango Dr., Suite 100<br>Las Vegas, NV 89113</p><p><a href="https://www.google.com/maps/search/?api=1&query=4955+S+Durango+Dr+Suite+100+Las+Vegas+NV+89113" target="_blank" rel="noopener">Get directions ↗</a></p></div></div>
-    <div class="detail"><span class="detail-icon">♟</span><div><strong>What to bring</strong><p>Just yourself! Chess sets will be available. You’re welcome to bring a favorite set, too.</p></div></div>
+    <div class="detail">
+     <span class="detail-icon">📅</span>
+     <div><strong>Opening meeting</strong><p>Thursday, October 15, 2026</p></div>
+    </div>
+    <div class="detail">
+     <span class="detail-icon">🕓</span>
+     <div><strong>Weekly schedule</strong><p>Every Thursday, 4:00–6:00 PM</p></div>
+    </div>
+    <div class="detail">
+     <span class="detail-icon">📍</span>
+     <div>
+      <strong>Where we meet</strong>
+      <p><a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries ↗</a><br>4955 S. Durango Dr., Suite 100<br>Las Vegas, NV 89113</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=4955+S+Durango+Dr+Suite+100+Las+Vegas+NV+89113" target="_blank" rel="noopener">Get directions ↗</a></p>
+     </div>
+    </div>
+    <div class="detail">
+     <span class="detail-icon">♟</span>
+     <div><strong>What to bring</strong><p>Just yourself! Chess sets will be available. You’re welcome to bring a favorite set, too.</p></div>
+    </div>
    </div>
   </div>
  </div>
@@ -200,7 +280,11 @@ footer a{color:var(--gold2)}
 
 <section id="contact" class="cta">
  <div class="container cta-inner">
-  <div><span class="kicker">We’d love to meet you</span><h2>Come for the chess. Stay for the community.</h2><p>Questions before your first visit? Reach out to Paul, club organizer.</p></div>
+  <div>
+   <span class="kicker">We’d love to meet you</span>
+   <h2>Come for the chess. Stay for the community.</h2>
+   <p>Questions before your first visit? Reach out to Paul, club organizer.</p>
+  </div>
   <a class="btn btn-gold" href="tel:+14065317648">Call Paul · 406-531-7648</a>
  </div>
 </section>
@@ -208,15 +292,34 @@ footer a{color:var(--gold2)}
 
 <footer>
  <div class="container footer-inner">
-  <div class="footer-brand"><img src="assets/kings-chess-club-logo.png" alt=""><div><strong>The King's Chess Club</strong><span>Chess • Community • Character</span></div></div>
-  <div class="copyright">Hosted at 3 Cord Ministries · Las Vegas, Nevada<br><a href="#home">Back to top ↑</a></div>
+  <div class="footer-brand">
+   <img src="assets/kings-chess-club-logo.png" alt="">
+   <div><strong>The King's Chess Club</strong><span>Chess • Community • Character</span></div>
+  </div>
+  <div class="copyright">
+   Hosted at <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries ↗</a> · Las Vegas, Nevada<br>
+   <a href="#home">Back to top ↑</a>
+  </div>
  </div>
 </footer>
+
 <script>
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#main-nav');
-toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'×':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');toggle.textContent='☰';}));
+
+toggle.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded',String(open));
+  toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  toggle.textContent=open?'×':'☰';
+});
+
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  toggle.setAttribute('aria-label','Open navigation');
+  toggle.textContent='☰';
+}));
 </script>
 </body>
 </html>
