@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Kings Chess Club</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a; /* Sleek chess-dark background */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Subtle abstract background pattern resembling a chessboard grid */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+
+        .card {
+            background-color: #262626;
+            border: 1px solid #333333;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 2;
+            position: relative;
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: #333;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: #ffd700; /* Gold accent color fit for kings */
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: #b3b3b3;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.1);
+            color: #ffd700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        .btn-back:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Crown / Chess themed icon placeholder -->
+        <div class="icon-wrapper">
+            <svg xmlns="http://w3.org" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14a1 1 0 0 0 1-1v-1H4v1a1 1 0 0 0 1 1z"/></svg>
+        </div>
+        
+        <div class="badge">Making our move</div>
+        
+        <!-- Simply tweak the brand name here for your other placeholders! -->
+        <h1>LinkedIn Coming Soon</h1>
+        
+        <p>We are currently setting up our official social media presence. Check back shortly to connect with our players, get match updates, and view puzzle solutions!</p>
+        
+        <!-- Points right back to your home page -->
+        <a href="index.html" class="btn-back">Return to Club Homepage</a>
+    </div>
+
+</body>
+</html>
