@@ -135,7 +135,7 @@ footer a{color:var(--gold2)}
 .social-media-container {
     display: flex;
     justify-content: center; /* Centers the row. Change to 'flex-start' for left-aligned or 'flex-end' for right */
-    gap: 20px;               /* Increased spacing between the larger icons */
+    gap: 20px;               /* Clean, even spacing between the 54px icons */
     padding: 30px;
     background-color: transparent; 
 }
@@ -144,38 +144,61 @@ footer a{color:var(--gold2)}
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 54px;             /* Increased from 40px */
-    height: 54px;            /* Increased from 40px */
+    width: 54px;             
+    height: 54px;            
     border-radius: 50%;
-    color: #333;             /* Default color for icons */
+    color: #ffffff;          /* Makes all icons/letters white inside their colored backgrounds */
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.2s ease; /* Smooth lift effect when hovered */
 }
 
-/* Scales up the Facebook SVG inside the larger anchor link */
+/* Subtle interactive lift on hover for all icons */
+.social-icon:hover {
+    transform: scale(1.08);  
+}
+
 .social-icon svg {
-    width: 32px;             /* Increased from 24px */
-    height: 32px;            /* Increased from 24px */
+    width: 32px;             
+    height: 32px;            
 }
 
-/* Facebook specific color on hover */
-.social-icon.facebook:hover {
-    background-color: #1877F2;
-    color: #fff;
+/* Official Brand Colors (Permanent background colors) */
+
+.social-icon.facebook {
+    background-color: #1877F2; /* Official Facebook Blue */
 }
 
-/* Styling for the larger placeholders */
+.social-icon.instagram {
+    /* Instagram's signature gradient */
+    background: background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon.x-twitter {
+    background-color: #000000; /* Official X Black */
+}
+
+.social-icon.pinterest {
+    background-color: #BD081C; /* Official Pinterest Red */
+}
+
+.social-icon.linkedin {
+    background-color: #0077B5; /* Official LinkedIn Blue */
+}
+
+.social-icon.threads {
+    background-color: #000000; /* Official Threads Black */
+}
+
+/* Temporary placeholder styling for the unlinked slots */
 .icon-placeholder {
-    font-size: 14px;         /* Increased text size */
+    font-size: 14px;         
     font-weight: bold;
-    border: 1.5px dashed #999;
-    border-radius: 50%;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #999;
+    color: #ffffff;          /* White text against the brand colors */
 }
 </style>
 </head>
