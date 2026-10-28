@@ -135,8 +135,8 @@ footer a{color:var(--gold2)}
 .social-media-container {
     display: flex;
     justify-content: center; /* Centers the row. Change to 'flex-start' for left-aligned or 'flex-end' for right */
-    gap: 15px;               /* Guarantees clean, even spacing between all 6 icons */
-    padding: 20px;
+    gap: 20px;               /* Increased spacing between the larger icons */
+    padding: 30px;
     background-color: transparent; 
 }
 
@@ -144,12 +144,18 @@ footer a{color:var(--gold2)}
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 90%;
+    width: 54px;             /* Increased from 40px */
+    height: 54px;            /* Increased from 40px */
+    border-radius: 50%;
     color: #333;             /* Default color for icons */
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scales up the Facebook SVG inside the larger anchor link */
+.social-icon svg {
+    width: 32px;             /* Increased from 24px */
+    height: 32px;            /* Increased from 24px */
 }
 
 /* Facebook specific color on hover */
@@ -158,11 +164,11 @@ footer a{color:var(--gold2)}
     color: #fff;
 }
 
-/* Styling for the placeholders until you replace them with actual SVG/FontAwesome icons */
+/* Styling for the larger placeholders */
 .icon-placeholder {
-    font-size: 11px;
+    font-size: 14px;         /* Increased text size */
     font-weight: bold;
-    border: 1px dashed #999;
+    border: 1.5px dashed #999;
     border-radius: 50%;
     width: 100%;
     height: 100%;
