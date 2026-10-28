@@ -132,6 +132,45 @@ footer a{color:var(--gold2)}
  .footer-inner{flex-direction:column;text-align:center}.footer-brand{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+.social-media-container {
+    display: flex;
+    justify-content: center; /* Centers the row. Change to 'flex-start' for left-aligned or 'flex-end' for right */
+    gap: 15px;               /* Guarantees clean, even spacing between all 6 icons */
+    padding: 20px;
+    background-color: transparent; 
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #333;             /* Default color for icons */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Facebook specific color on hover */
+.social-icon.facebook:hover {
+    background-color: #1877F2;
+    color: #fff;
+}
+
+/* Styling for the placeholders until you replace them with actual SVG/FontAwesome icons */
+.icon-placeholder {
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px dashed #999;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
 </style>
 </head>
 <body>
@@ -299,6 +338,38 @@ footer a{color:var(--gold2)}
    Hosted at <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a> · Las Vegas, Nevada<br>
    <a href="#home">Back to top ↑</a>
   </div>
+ </div>
+ <!-- Social Media Icons Row -->
+ <div class="social-media-container">
+    <!-- Facebook (Active) -->
+    <a href="https://www.facebook.com/profile.php?id=61596073044472" class="social-icon facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+    </a>
+
+    <!-- Instagram Placeholder -->
+    <a href="#" class="social-icon instagram" aria-label="Instagram">
+        <span class="icon-placeholder">IG</span>
+    </a>
+
+    <!-- X (formerly Twitter) Placeholder -->
+    <a href="#" class="social-icon x-twitter" aria-label="X">
+        <span class="icon-placeholder">X</span>
+    </a>
+
+    <!-- Pinterest Placeholder -->
+    <a href="#" class="social-icon pinterest" aria-label="Pinterest">
+        <span class="icon-placeholder">PIN</span>
+    </a>
+
+    <!-- LinkedIn Placeholder -->
+    <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+        <span class="icon-placeholder">LN</span>
+    </a>
+
+    <!-- Threads Placeholder -->
+    <a href="#" class="social-icon threads" aria-label="Threads">
+        <span class="icon-placeholder">TH</span>
+    </a>
  </div>
 </footer>
 
