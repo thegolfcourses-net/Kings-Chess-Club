@@ -1,424 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071b3b">
-<meta name="description" content="The King's Chess Club at 3 Cord Ministries in Las Vegas. A welcoming chess club and Christian outreach. All ages and skill levels welcome. Beginners welcome!">
-<title>The King's Chess Club | Chess • Community • Character</title>
-<style>
-:root{--navy:#071b3b;--navy2:#0d2b55;--gold:#e9aa28;--gold2:#ffd46a;--cream:#fffaf0;--ink:#14213a;--muted:#596579;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
-a{color:inherit}
-img{max-width:100%;display:block}
-.container{width:min(1140px,calc(100% - 36px));margin-inline:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(7,27,59,.97);color:#fff;border-bottom:3px solid var(--gold);backdrop-filter:blur(10px)}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:.02em}
-.brand img{width:54px;height:54px;object-fit:contain;background:#fff;border-radius:50%}
-.brand span{line-height:1.08}.brand small{display:block;color:var(--gold2);font-size:.72rem;font-weight:650;letter-spacing:.12em;margin-top:4px}
-nav{display:flex;align-items:center;gap:18px}
-nav a{text-decoration:none;font-size:.91rem;font-weight:650;color:#fff}
-nav a:hover,nav a:focus{color:var(--gold2)}
-.menu-toggle{display:none;background:transparent;color:white;border:1px solid #8290a8;border-radius:8px;padding:8px 11px;font-size:1.3rem}
-.hero{position:relative;isolation:isolate;color:#fff;background:linear-gradient(90deg,rgba(5,20,46,.92),rgba(5,20,46,.68)),url('https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=2000&q=85') center 48%/cover}
-.hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:7px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
-.hero-inner{min-height:590px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:36px;padding-block:70px}
-.eyebrow{display:inline-block;color:var(--gold2);font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem}
-h1,h2,h3,p{margin-top:0}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,5.8vw,5.2rem);line-height:.98;margin:17px 0 22px;letter-spacing:-.035em}
-h1 em{font-style:normal;color:var(--gold2)}
-.hero p{font-size:clamp(1.05rem,1.8vw,1.25rem);line-height:1.7;max-width:620px;color:#edf2fa}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:800;border:2px solid var(--gold);transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:var(--navy)}
-.btn-outline{color:#fff;border-color:#fff;background:transparent}
-.hero-logo{width:min(100%,360px);justify-self:center;padding:14px;background:rgba(255,255,255,.96);border-radius:50%;box-shadow:0 20px 70px #0006}
-.hero-logo img{width:100%;border-radius:50%}
-.quick-facts{background:var(--cream);border-bottom:1px solid #f0dfb5}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-block:25px}
-.fact{display:flex;align-items:center;gap:13px;padding:8px 14px}
-.fact-icon{display:grid;place-items:center;width:45px;height:45px;flex:none;border-radius:12px;background:var(--navy);color:var(--gold2);font-size:1.35rem}
-.fact strong{display:block;color:var(--navy);margin-bottom:3px}
-.fact span:last-child{font-size:.92rem;color:var(--muted)}
-section{padding:82px 0}
-.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
-.kicker{color:#9b6a05;text-transform:uppercase;font-weight:850;font-size:.78rem;letter-spacing:.16em}
-h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;color:var(--navy);margin:12px 0 16px}
-.section-head p{font-size:1.08rem;line-height:1.75;color:var(--muted)}
-.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-.photo{overflow:hidden;border-radius:18px;box-shadow:0 16px 45px #071b3b1c;background:#e9edf2}
-.photo img{width:100%;height:100%;min-height:320px;object-fit:cover}
-.copy h3{font-family:Georgia,serif;font-size:1.8rem;color:var(--navy);margin-bottom:14px}
-.copy p{line-height:1.8;color:var(--muted)}
-.checklist{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
-.checklist li{display:flex;gap:10px;align-items:flex-start;line-height:1.55}
-.checklist li:before{content:"✓";display:grid;place-items:center;flex:none;width:24px;height:24px;background:#fff1c8;color:#805500;font-weight:900;border-radius:50%}
-.welcome{background:#f6f8fc}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e6eaf0;box-shadow:0 12px 32px #071b3b0b}
-.card img{width:100%;height:220px;object-fit:cover}
-.card-body{padding:24px}
-.card h3{font-family:Georgia,serif;font-size:1.35rem;color:var(--navy);margin-bottom:10px}
-.card p{color:var(--muted);line-height:1.7;margin-bottom:0}
-.quote-band{background:var(--navy);color:#fff;text-align:center;padding:62px 18px;border-block:5px solid var(--gold)}
-.quote-band blockquote{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.45rem,3.3vw,2.35rem);line-height:1.35;max-width:850px;margin:0 auto 14px}
-.quote-band cite{font-style:normal;font-weight:800;letter-spacing:.08em;color:var(--gold2)}
-.quote-band p{max-width:780px;margin:20px auto 0;color:#e3eaf5;line-height:1.75;font-size:1rem}
-.schedule-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:stretch}
-.schedule-panel{padding:30px;border-radius:16px;background:var(--navy);color:white}
-.schedule-panel h3{font-family:Georgia,serif;font-size:1.65rem;color:var(--gold2)}
-.schedule-panel p{line-height:1.75;color:#edf2fa}
-.schedule-panel .btn{margin-top:6px}
-.details{border:1px solid #e1e6ee;border-radius:16px;padding:30px}
-.detail{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid #e9edf2}
-.detail:last-child{border-bottom:0}
-.detail-icon{font-size:1.35rem}
-.detail strong{display:block;color:var(--navy);margin-bottom:5px}
-.detail p{margin:0;color:var(--muted);line-height:1.6}
-.detail p+p{margin-top:10px}
-.detail a{color:#174d91;text-underline-offset:3px;font-weight:650}
-.note{font-size:.9rem;color:var(--muted);margin-top:18px;line-height:1.7}
-.church-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--gold2);font-weight:800;text-decoration:underline;text-underline-offset:4px}
-.church-link:hover{color:#fff}
-.cta{background:linear-gradient(125deg,#fff8e7,#f8fbff)}
-.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
-.cta h2{max-width:680px;margin-bottom:10px}
-.cta p{color:var(--muted);line-height:1.7;margin-bottom:0}
-footer{background:#04132c;color:#dce4f1;padding:35px 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:22px}
-.footer-brand{display:flex;align-items:center;gap:12px}
-.footer-brand img{width:46px;height:46px;object-fit:contain;background:#fff;border-radius:50%}
-.footer-brand strong{display:block;color:#fff}
-.footer-brand span,.copyright{font-size:.86rem;color:#aebbd0}
-footer a{color:var(--gold2)}
-@media(max-width:1050px){
- .nav{gap:12px}
- nav{gap:12px}
- nav a{font-size:.84rem}
- .brand{font-size:.9rem}
- .brand small{font-size:.65rem}
-}
-@media(max-width:850px){
- .hero-inner{grid-template-columns:1fr .62fr;gap:20px;min-height:530px}
- .hero-logo{width:min(100%,260px)}
- nav{gap:10px}nav a{font-size:.8rem}
- .facts{gap:4px}.fact{padding:7px 4px}
- .cards{grid-template-columns:repeat(2,1fr)}.card:last-child{grid-column:span 2}
-}
-@media(max-width:700px){
- .menu-toggle{display:block}
- nav{display:none;position:absolute;top:78px;left:0;right:0;padding:18px 22px 22px;background:var(--navy);border-bottom:2px solid var(--gold);flex-direction:column;align-items:stretch;gap:0}
- nav.open{display:flex}nav a{padding:13px 2px;border-bottom:1px solid #ffffff20;font-size:1rem}
- .nav{min-height:68px}
-}
-@media(max-width:650px){
- .container{width:min(100% - 28px,560px)}
- .nav{min-height:68px}.brand img{width:46px;height:46px}.brand{font-size:.92rem}.brand small{font-size:.63rem}
- nav{top:68px}
- .hero-inner{grid-template-columns:1fr;min-height:0;padding-block:58px 46px;text-align:center}
- .hero-copy p{margin-inline:auto}.actions{justify-content:center}.hero-logo{width:190px;grid-row:1;margin-bottom:8px}
- h1{font-size:clamp(2.6rem,12vw,4rem)}
- .facts{grid-template-columns:1fr;padding-block:13px;gap:0}.fact{padding:12px 4px;border-bottom:1px solid #eddfc2}.fact:last-child{border:0}
- section{padding:62px 0}.section-head{margin-bottom:30px}
- .intro-grid,.schedule-grid{grid-template-columns:1fr;gap:26px}
- .photo img{min-height:250px;max-height:340px}
- .cards{grid-template-columns:1fr}.card:last-child{grid-column:auto}.card img{height:230px}
- .quote-band{padding:48px 18px}
- .cta-inner{display:block;text-align:center}.cta-inner .btn{margin-top:22px}
- .footer-inner{flex-direction:column;text-align:center}.footer-brand{justify-content:center}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-.social-media-container {
-    display: flex;
-    justify-content: center; /* Centers the row. Change to 'flex-start' for left-aligned or 'flex-end' for right */
-    gap: 20px;               /* Clean, even spacing between the 54px icons */
-    padding: 30px;
-    background-color: transparent; 
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Kings Chess Club</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;             
-    height: 54px;            
-    border-radius: 50%;
-    color: #ffffff;          /* Makes all icons/letters white inside their colored backgrounds */
-    text-decoration: none;
-    transition: transform 0.2s ease; /* Smooth lift effect when hovered */
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a; /* Sleek chess-dark background */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
 
-/* Subtle interactive lift on hover for all icons */
-.social-icon:hover {
-    transform: scale(1.08);  
-}
+        /* Subtle abstract background pattern resembling a chessboard grid */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
 
-.social-icon svg {
-    width: 32px;             
-    height: 32px;            
-}
+        .card {
+            background-color: #262626;
+            border: 1px solid #333333;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 2;
+            position: relative;
+        }
 
-/* Official Brand Colors (Permanent background colors) */
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: #333;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: #ffd700; /* Gold accent color fit for kings */
+        }
 
-.social-icon.facebook {
-    background-color: #1877F2; /* Official Facebook Blue */
-}
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
 
-.social-icon.instagram {
-    /* Instagram's signature gradient */
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
+        p {
+            color: #b3b3b3;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
 
-.social-icon.x-twitter {
-    background-color: #000000; /* Official X Black */
-}
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.1);
+            color: #ffd700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
 
-.social-icon.pinterest {
-    background-color: #BD081C; /* Official Pinterest Red */
-}
+        .btn-back {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
 
-.social-icon.linkedin {
-    background-color: #0077B5; /* Official LinkedIn Blue */
-}
+        .btn-back:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
 
-.social-icon.threads {
-    background-color: #000000; /* Official Threads Black */
-}
-
-/* Temporary placeholder styling for the unlinked slots */
-.icon-placeholder {
-    font-size: 14px;         
-    font-weight: bold;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;          /* White text against the brand colors */
-}
-</style>
+        .btn-back:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="The King's Chess Club home">
-      <img src="assets/kings-chess-club-logo.png" alt="The King's Chess Club logo">
-      <span>THE KING'S CHESS CLUB<small>CHESS • COMMUNITY • CHARACTER</small></span>
-    </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
-    <nav id="main-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#welcome">Who Can Join?</a>
-      <a href="#meetings">Meetings</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a>
-    </nav>
-  </div>
-</header>
 
-<main id="home">
-<section class="hero">
- <div class="container hero-inner">
-  <div class="hero-copy">
-   <span class="eyebrow">Chess, community & Christian hospitality</span>
-   <h1>Good moves.<br><em>Great community.</em></h1>
-   <p>Come enjoy chess, meet new people, and sharpen your skills in a friendly, welcoming setting. Whether you’re learning your first moves or have played for years, there’s a seat for you.</p>
-   <div class="actions">
-    <a class="btn btn-gold" href="#meetings">Plan Your Visit</a>
-    <a class="btn btn-outline" href="#welcome">Beginners Welcome</a>
-   </div>
-   <a class="church-link" href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">Visit 3 Cord Ministries website</a>
-  </div>
-  <div class="hero-logo"><img src="assets/kings-chess-club-logo.png" alt="The King's Chess Club emblem with Proverbs 27:17"></div>
- </div>
-</section>
-
-<div class="quick-facts">
- <div class="container facts">
-  <div class="fact"><span class="fact-icon">♟</span><div><strong>All ages & skill levels</strong><span>New players and experienced players alike</span></div></div>
-  <div class="fact"><span class="fact-icon">◷</span><div><strong>Every Thursday</strong><span>4:00–6:00 PM</span></div></div>
-  <div class="fact"><span class="fact-icon">✦</span><div><strong>Friendly and casual</strong><span>Play, learn, and connect</span></div></div>
- </div>
-</div>
-
-<section id="about">
- <div class="container intro-grid">
-  <div class="photo"><img src="assets/ChessBoardPiecesTall.png" alt="Chess pieces on a chessboard" loading="lazy"></div>
-  <div class="copy">
-   <span class="kicker">Chess • Community • Character</span>
-   <h2>More than a game.</h2>
-   <h3>A welcoming place to play and grow.</h3>
-   <p>The King’s Chess Club brings people together over a game that rewards patience, creativity, sportsmanship, and thoughtful decisions. Hosted at <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a>, our club is also a Christian outreach. We hope to share Christ’s love through kindness, hospitality, encouragement, and genuine friendship.</p>
-   <ul class="checklist">
-    <li>Casual games in a relaxed atmosphere</li>
-    <li>Beginners can learn at their own pace</li>
-    <li>All ages and playing strengths are welcome</li>
-    <li>Come to play, learn, watch, or meet people</li>
-	<li>A short Bible devotional</li>
-   </ul>
-  </div>
- </div>
-</section>
-
-<section id="welcome" class="welcome">
- <div class="container">
-  <div class="section-head">
-   <span class="kicker">Pull up a chair</span>
-   <h2>There’s room for you here.</h2>
-   <p>You don’t need to be a strong player—or even know all the rules—to get started. Bring your curiosity and we’ll help you find your place at the board. Our hope is to make everyone feel welcome through kindness, encouragement, and genuine friendship.</p>
-  </div>
-  <div class="cards">
-   <article class="card">
-    <img src="assets/KingKnockingOverKing.png?auto=format&fit=crop&w=900&q=85" alt="Chess pieces set out for a game" loading="lazy">
-    <div class="card-body">
-     <h3>Love the game?</h3>
-     <p>Find a friendly opponent, try a new strategy, or enjoy a thoughtful game with fellow chess fans.</p>
+    <div class="card">
+        <!-- Crown / Chess themed icon placeholder -->
+        <div class="icon-wrapper">
+            <svg xmlns="http://w3.org" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14a1 1 0 0 0 1-1v-1H4v1a1 1 0 0 0 1 1z"/></svg>
+        </div>
+        
+        <div class="badge">Making our move</div>
+        
+        <!-- Simply tweak the brand name here for your other placeholders! -->
+        <h1>Instagram Coming Soon</h1>
+        
+        <p>We are currently setting up our official social media presence. Check back shortly to connect with our players, get match updates, and view puzzle solutions!</p>
+        
+        <!-- Points right back to your home page -->
+        <a href="index.html" class="btn-back">Return to Club Homepage</a>
     </div>
-   </article>
-   <article class="card">
-    <img src="assets/StartingPositionWhitevsBeige.png?auto=format&fit=crop&w=900&q=85" alt="Chessboard and pieces ready for play" loading="lazy">
-    <div class="card-body">
-     <h3>Just getting started?</h3>
-     <p>Beginners are welcome. Ask questions, learn the pieces, and build confidence one move at a time.</p>
-    </div>
-   </article>
-   <article class="card">
-    <img src="assets/OpeningDayChessClub10-15-2026.jpg?auto=format&fit=crop&w=900&q=85" alt="Children learning together in a group setting" loading="lazy">
-    <div class="card-body">
-     <h3>A club for all ages</h3>
-     <p>Chess can bring generations together. Young players are welcome with a parent or caregiver’s support.</p>
-    </div>
-   </article>
-  </div>
-  <p class="note">Please check with a parent or guardian about arrangements for children attending.</p>
- </div>
-</section>
 
-<div class="quote-band">
- <blockquote>“As iron sharpens iron, so one person sharpens another.”</blockquote>
- <cite>PROVERBS 27: 17</cite>
- <p>This Bible verse captures our hope for the club: that we encourage one another, grow in character, and build genuine friendships—over the chessboard and beyond and foster a genuine relationship with Jesus Christ.</p>
-</div>
-
-<section id="meetings">
- <div class="container">
-  <div class="section-head">
-   <span class="kicker">Join us</span>
-   <h2>Make Thursday your chess day.</h2>
-   <p>Drop in for a game, meet the club, and see what you think. No tournament experience is needed.</p>
-  </div>
-  <div class="schedule-grid">
-   <div class="schedule-panel">
-    <h3>Everyone is welcome.</h3>
-    <p>All ages and skill levels welcome! Beginners welcome! We’re starting with casual play and a community-first atmosphere. As a Christian outreach hosted by 3 Cord Ministries, we aim to offer hospitality and friendship through Jesus Christ.</p>
-    <a class="btn btn-gold" href="#contact">Ask a Question</a>
-    <br>
-    <a class="church-link" href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">Learn about 3 Cord Ministries</a>
-   </div>
-   <div class="details">
-    <div class="detail">
-     <span class="detail-icon">📅</span>
-     <div><strong>Opening meeting</strong><p>Thursday, October 15, 2026</p></div>
-    </div>
-    <div class="detail">
-     <span class="detail-icon">🕓</span>
-     <div><strong>Weekly schedule</strong><p>Every Thursday, 4:00–6:00 PM</p></div>
-    </div>
-    <div class="detail">
-     <span class="detail-icon">📍</span>
-     <div>
-      <strong>Where we meet</strong>
-      <p><a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a><br>4955 S. Durango Dr., Suite 100<br>Las Vegas, NV 89113</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&query=4955+S+Durango+Dr+Suite+100+Las+Vegas+NV+89113" target="_blank" rel="noopener">Get directions</a></p>
-     </div>
-    </div>
-    <div class="detail">
-     <span class="detail-icon">♟</span>
-     <div><strong>What to bring</strong><p>Just yourself! Chess sets will be available. You’re welcome to bring a favorite set, too.</p></div>
-    </div>
-   </div>
-  </div>
-    <!-- Social Media Icons Row -->
-   <div class="social-media-container">
-    <!-- Facebook (Active) -->
-    <a href="https://www.facebook.com/profile.php?id=61596073044472" class="social-icon facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
-    </a>
-
-    <!-- Instagram Placeholder -->
-    <a href="#" class="social-icon instagram" aria-label="Instagram">
-        <span class="icon-placeholder">IG</span>
-    </a>
-
-    <!-- X (formerly Twitter) Placeholder -->
-    <a href="#" class="social-icon x-twitter" aria-label="X">
-        <span class="icon-placeholder">X</span>
-    </a>
-
-    <!-- Pinterest Placeholder -->
-    <a href="#" class="social-icon pinterest" aria-label="Pinterest">
-        <span class="icon-placeholder">PIN</span>
-    </a>
-
-    <!-- LinkedIn Placeholder -->
-    <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
-        <span class="icon-placeholder">LN</span>
-    </a>
-
-    <!-- Threads Placeholder -->
-    <a href="#" class="social-icon threads" aria-label="Threads">
-        <span class="icon-placeholder">TH</span>
-    </a>
-   </div> <!-- end social media icons row -->
- </div>
-</section>
-
-<section id="contact" class="cta">
- <div class="container cta-inner">
-  <div>
-   <span class="kicker">We’d love to meet you</span>
-   <h2>Come for the chess. Stay for the community.</h2>
-   <p>Questions before your first visit? Reach out to Paul, club organizer.</p>
-  </div>
-  <a class="btn btn-gold" href="tel:+14065317648">Call Paul · 406-531-7648</a>
- </div>
-</section>
-</main>
-<footer>
- <div class="container footer-inner">
-  <div class="footer-brand">
-   <img src="assets/kings-chess-club-logo.png" alt="">
-   <div><strong>The King's Chess Club</strong><span>Chess • Community • Character</span></div>
-  </div>
-  <div class="copyright">
-   Hosted at <a href="https://www.3cordministrieslasvegas.com/" target="_blank" rel="noopener">3 Cord Ministries</a> · Las Vegas, Nevada<br>
-   <a href="#home">Back to top ↑</a>
-  </div>
- </div>
-
-</footer>
-
-<script>
-const toggle=document.querySelector('.menu-toggle');
-const nav=document.querySelector('#main-nav');
-
-toggle.addEventListener('click',()=>{
-  const open=nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded',String(open));
-  toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');
-  toggle.textContent=open?'×':'☰';
-});
-
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-  nav.classList.remove('open');
-  toggle.setAttribute('aria-expanded','false');
-  toggle.setAttribute('aria-label','Open navigation');
-  toggle.textContent='☰';
-}));
-</script>
 </body>
 </html>
