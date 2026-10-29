@@ -1,0 +1,16 @@
+# Node dependencies (never push these!)
+node_modules/
+
+# Local environment variables / secrets
+.env
+.env.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Common build and log folders
+dist/
+build/
+npm-debug.log*
+yarn-error.log*
